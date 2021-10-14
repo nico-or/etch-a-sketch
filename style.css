@@ -1,0 +1,20 @@
+#title-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: lightcoral;
+    margin-bottom: 5vh;
+}
+
+#main-wrapper{
+    display: grid;
+    grid-template-columns: 30% 70%;
+}
+
+#options-wrapper {
+    background-color: lightblue;
+}
+
+#sketch-wrapper {
+    background-color: greenyellow;
+}
