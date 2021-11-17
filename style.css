@@ -18,3 +18,15 @@
 #sketch-wrapper {
     background-color: greenyellow;
 }
+
+#grid{
+    display: grid;
+    grid-gap:0.5em;
+    grid-template-columns: repeat(4,1em);
+}
+
+.cell {
+    background-color: #fff;
+    height: 1em;
+    width: 1em;
+}
