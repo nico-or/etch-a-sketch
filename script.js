@@ -12,6 +12,7 @@ const makeRow = function() {
     cell.classList.add("row");
     return cell;
 }
+
 // grid constructor
 const makeGrid = function (n) {
     let grid = document.querySelector(".grid");
@@ -52,7 +53,7 @@ function map(array, rule) {
 
 // reduces Value. intended to use with rgb values
 function reduceValue(value) {
-    return (value - 16).toFixed();
+    return value - 26;
 }
 
 // turns rgb string into array
