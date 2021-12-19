@@ -76,3 +76,14 @@ function rgbArray2String(rgb) {
     if (rgb.length != 3) return;
     return `rgb(${rgb[0]}, ${rgb[1]}, ${rgb[2]})`;
 }
+
+function clearGrid () {
+    let wrapper = document.querySelector("#grid-wrapper");
+    let grid = document.querySelector("#grid");
+    wrapper.removeChild(grid);
+}
+
+function resetGrid () {
+    clearGrid()
+    makeGrid()
+}
