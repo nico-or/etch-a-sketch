@@ -19,6 +19,9 @@ function makeRow () {
 // grid constructor
 function makeGrid (n = 16) {
 
+    let maxSize = 32;
+    n = n > maxSize ? maxSize : n;
+
     let grid = document.createElement("div");
     grid.classList.add("centered")
     grid.id = "grid"
