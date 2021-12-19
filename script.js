@@ -13,6 +13,8 @@ let grid = document.querySelector(".grid");
 console.log(grid);
 
 grid.addEventListener('mouseover', e => {
-    console.log(e)
+    if (e.target.classList.contains("cell")) {
+        console.log(e);
+    }
 });
 
