@@ -25,16 +25,20 @@ const makeGrid = function (n) {
     }
 };
 
-// Cell darkening functionality
-let grid = document.querySelector(".grid");
+// build default grid
+makeGrid(16);
 
-grid.addEventListener('mouseover', e => {
-    if (e.target.classList.contains("cell")) {
-        let currentRGB = e.target.style.backgroundColor
-        let rgbArray = rgbString2Array(currentRGB);
-        let newRGB = map(rgbArray, reduceValue)
-        e.target.style.backgroundColor = rgbArray2String(newRGB);
-    }
+// Add cell event listener
+let cells = document.querySelectorAll(".cell");
+cells.forEach( cell => {
+    cell.addEventListener('mouseover', e => {
+        if (e.target.classList.contains("cell")) {
+            let currentRGB = e.target.style.backgroundColor
+            let rgbArray = rgbString2Array(currentRGB);
+            let newRGB = map(rgbArray, reduceValue)
+            e.target.style.backgroundColor = rgbArray2String(newRGB);
+        }
+    })
 });
 
 // applies rule() function over each element of array
