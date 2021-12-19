@@ -31,12 +31,12 @@
     background-color: greenyellow;
 }
 
-.grid{
-    display: grid;
-}
-
 .cell {
+    box-sizing: border-box;
     height: 1em;
     width: 1em;
-    border-radius: 0.2em;
+}
+
+.cell:hover {
+    border: 1px solid #DDD;
 }
