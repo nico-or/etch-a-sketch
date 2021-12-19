@@ -1,5 +1,8 @@
+// Onload function calls
+makeGrid();
+
 // cell constructor
-const makeCell = function() {
+function makeCell () {
     let cell = document.createElement("div");
     cell.classList.add("cell");
     cell.style.backgroundColor = "#fff";
@@ -7,15 +10,18 @@ const makeCell = function() {
 }
 
 // row constructor
-const makeRow = function() {
+function makeRow () {
     let cell = document.createElement("div");
     cell.classList.add("row");
     return cell;
 }
 
 // grid constructor
-const makeGrid = function (n) {
-    let grid = document.querySelector(".grid");
+function makeGrid (n = 16) {
+
+    let grid = document.createElement("div");
+    grid.classList.add("centered")
+    grid.id = "grid"
 
     for (let i = 0; i < n; i++) {
         let row = makeRow()
@@ -24,23 +30,27 @@ const makeGrid = function (n) {
         }
         grid.append(row);
     }
+
+    let wrapper = document.querySelector("#grid-wrapper");
+    wrapper.appendChild(grid)
+
+    addCellListeners();
 };
 
-// build default grid
-makeGrid(16);
-
 // Add cell event listener
-let cells = document.querySelectorAll(".cell");
-cells.forEach( cell => {
-    cell.addEventListener('mouseover', e => {
-        if (e.target.classList.contains("cell")) {
-            let currentRGB = e.target.style.backgroundColor
-            let rgbArray = rgbString2Array(currentRGB);
-            let newRGB = map(rgbArray, reduceValue)
-            e.target.style.backgroundColor = rgbArray2String(newRGB);
-        }
-    })
-});
+function addCellListeners() {
+    let cells = document.querySelectorAll(".cell");
+    cells.forEach( cell => {
+        cell.addEventListener('mouseover', e => {
+            if (e.target.classList.contains("cell")) {
+                let currentRGB = e.target.style.backgroundColor
+                let rgbArray = rgbString2Array(currentRGB);
+                let newRGB = map(rgbArray, reduceValue)
+                e.target.style.backgroundColor = rgbArray2String(newRGB);
+            }
+        })
+    });
+}
 
 // applies rule() function over each element of array
 function map(array, rule) {
