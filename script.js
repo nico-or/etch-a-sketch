@@ -1,11 +1,19 @@
+// cell constructor
+const makeCell = function() {
+    let cell = document.createElement("div");
+    cell.classList.add("cell");
+    cell.style.backgroundColor = "#fff";
+    console.log(cell);
+    return cell;
+}
+
+// grid constructor
 const makeGrid = function (n) {
-    let grid, cell;
-    grid = document.getElementById("grid");
+    let grid;
+    grid = document.querySelector(".grid");
     for (let i = 0; i < n; i++) {
-        cell = document.createElement("div");
-        cell.classList.add("cell")
-        grid.append(cell);
-    }
+        grid.append(makeCell());
+    };
 };
 
 // Cell darkening functionality
