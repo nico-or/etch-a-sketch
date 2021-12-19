@@ -1,28 +1,38 @@
-#title-wrapper {
+.centered {
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    background-color: lightcoral;
+    justify-content: center;
+    align-items: center;
+}
+
+.bubble {
+    padding: 1em 2em;
+    border-radius: 1em;
+}
+
+.title-wrapper {
     margin-bottom: 5vh;
 }
 
-#main-wrapper{
+.title {
+    background-color: lightcoral;
+    font-size: 32px;
+}
+
+.main-wrapper{
     display: grid;
     grid-template-columns: 30% 70%;
 }
 
-#options-wrapper {
+.options-wrapper {
     background-color: lightblue;
 }
 
-#sketch-wrapper {
+.sketch-wrapper {
     background-color: greenyellow;
 }
 
-#grid{
+.grid{
     display: grid;
-    grid-gap:0.5em;
-    grid-template-columns: repeat(4,1em);
 }
 
 .cell {
