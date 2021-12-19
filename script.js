@@ -77,13 +77,20 @@ function rgbArray2String(rgb) {
     return `rgb(${rgb[0]}, ${rgb[1]}, ${rgb[2]})`;
 }
 
+// reset button functionality
 function clearGrid () {
     let wrapper = document.querySelector("#grid-wrapper");
     let grid = document.querySelector("#grid");
     wrapper.removeChild(grid);
 }
 
-function resetGrid () {
+function resetGrid (n = 16) {
     clearGrid()
-    makeGrid()
+    makeGrid(n)
+}
+
+// resize button functionality
+function resizeGrid(params) {
+    let size = +document.querySelector("#gridSize").value
+    resetGrid(size)   
 }
