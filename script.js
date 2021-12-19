@@ -3,17 +3,26 @@ const makeCell = function() {
     let cell = document.createElement("div");
     cell.classList.add("cell");
     cell.style.backgroundColor = "#fff";
-    console.log(cell);
     return cell;
 }
 
+// row constructor
+const makeRow = function() {
+    let cell = document.createElement("div");
+    cell.classList.add("row");
+    return cell;
+}
 // grid constructor
 const makeGrid = function (n) {
-    let grid;
-    grid = document.querySelector(".grid");
+    let grid = document.querySelector(".grid");
+
     for (let i = 0; i < n; i++) {
-        grid.append(makeCell());
-    };
+        let row = makeRow()
+        for (let j = 0; j < n; j++) {
+            row.append(makeCell());
+        }
+        grid.append(row);
+    }
 };
 
 // Cell darkening functionality
