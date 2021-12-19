@@ -1,5 +1,7 @@
 # Etch-a-Sketch
 
-HTML + JavaScript implementation of a etch-a-sketch board.
+HTML + JavaScript implementation of an etch-a-sketch board.
 
-Part of The Odin Proyect Foundations curriculum.
+You can visit the website [here](https://nico-or.github.io/etch-a-sketch/).
+
+This is part of [The Odin Proyect](https://www.theodinproject.com) Foundations Path.
