@@ -6,4 +6,13 @@ const makeGrid = function (n) {
         cell.classList.add("cell")
         grid.append(cell);
     }
-}
+};
+
+// Cell darkening functionality
+let grid = document.querySelector(".grid");
+console.log(grid);
+
+grid.addEventListener('mouseover', e => {
+    console.log(e)
+});
+
