@@ -34,19 +34,23 @@
 #grid {
     display: flex;
     flex-direction: column;
-    width: 250px;
-    height: 250px;
+    --theSize: 250px;
+    width: var(--theSize);
+    height: var(--theSize);
 }
 
 .row {
     display: flex;
     flex-direction: row;
+    width: var(--theSize);
+    --minSize: 1px;
+    flex: 1 1 var(--minSize);
+    height: var(--minSize);
 }
 
 .cell {
     box-sizing: border-box;
-    height: 10px;
-    width: 10px;
+    flex: 1 1 var(--minSize);
 }
 
 .cell:hover {
