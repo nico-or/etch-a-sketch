@@ -1,3 +1,8 @@
+body {
+    margin: 0;
+    padding: 50px;
+}
+
 .centered {
     display: flex;
     justify-content: center;
@@ -21,6 +26,7 @@
 .main-wrapper{
     display: grid;
     grid-template-columns: 30% 70%;
+    gap: 20px;
 }
 
 .options-wrapper {
