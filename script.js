@@ -1,5 +1,10 @@
 // Onload function calls
-makeGrid();
+input = document.querySelector("#gridSize")
+label = document.querySelector('label')
+
+// build default grid
+makeGrid(Number(input.value));
+label.textContent = `Enter grid size (${input.min} to ${input.max})`
 
 // cell constructor
 function makeCell () {
@@ -17,11 +22,7 @@ function makeRow () {
 }
 
 // grid constructor
-function makeGrid (n = 16) {
-
-    let maxSize = 32;
-    n = n > maxSize ? maxSize : n;
-
+function makeGrid (n) {
     let grid = document.createElement("div");
     grid.classList.add("centered")
     grid.id = "grid"
@@ -87,13 +88,8 @@ function clearGrid () {
     wrapper.removeChild(grid);
 }
 
-function resetGrid (n = 16) {
-    clearGrid()
-    makeGrid(n)
-}
-
-// resize button functionality
-function resizeGrid(params) {
+function rebuildGrid () {
     let size = +document.querySelector("#gridSize").value
-    resetGrid(size)   
+    clearGrid()
+    makeGrid(size)
 }

@@ -8,9 +8,9 @@
     </div>
     <div class="main-wrapper">
         <div class="options-wrapper bubble">
-            <button id="reset" onclick=resetGrid()>reset grid</button>
-            <button id="resize" onclick=resizeGrid()>resize grid</button>
-            <input type="text" name="gridSize" id="gridSize">
+            <label for="gridSize"></label>
+            <input type="number" name="gridSize" id="gridSize" value="16" min="2" max="64">
+            <button id="resize" onclick=rebuildGrid()>Reset grid</button>
         </div>
         <div id = "grid-wrapper" class ="centered bubble">
         </div>
