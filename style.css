@@ -67,9 +67,15 @@ body {
     border: 1px solid #DDD;
 }
 
-@media screen and (max-width: 1000px) and (orientation: portrait) {
-    .main-wrapper {
-        display: flex;
-        flex-direction: column;
+@media screen and (orientation: portrait) {
+    body {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "header"
+            "options"
+            "grid";
+    }
+    #grid{
+        --theSize: 60vw;
     }
 }
