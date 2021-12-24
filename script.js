@@ -51,6 +51,7 @@ function addCellListeners() {
                 let rgbArray = rgbString2Array(currentRGB);
                 let newRGB = map(rgbArray, reduceValue)
                 e.target.style.backgroundColor = rgbArray2String(newRGB);
+                e.target.style.borderColor = rgbArray2String(newRGB)
             }
         })
     });

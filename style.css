@@ -59,12 +59,12 @@ body {
 }
 
 .cell {
-    box-sizing: border-box;
+    border: 1px solid #fff;
     flex: 1 1 var(--minSize);
 }
 
 .cell:hover {
-    border: 1px solid #DDD;
+    border: 1px solid #DDD !important;
 }
 
 @media screen and (orientation: portrait) {
