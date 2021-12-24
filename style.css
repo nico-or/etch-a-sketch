@@ -1,6 +1,12 @@
 body {
     margin: 0;
-    padding: 50px;
+    padding: 2em;
+    display: grid;
+    grid-template-columns: 30% 1fr;
+    grid-template-areas:
+    "header header"
+    "options grid";
+    gap: 20px;
 }
 
 .centered {
@@ -15,7 +21,8 @@ body {
 }
 
 .title-wrapper {
-    margin-bottom: 5vh;
+    margin-bottom: 1em;
+    grid-area: header;
 }
 
 .title {
@@ -23,26 +30,23 @@ body {
     font-size: 32px;
 }
 
-.main-wrapper{
-    display: grid;
-    grid-template-columns: 30% 70%;
-    gap: 20px;
-}
-
 .options-wrapper {
     background-color: lightblue;
+    grid-area: options;
 }
 
 #grid-wrapper {
     background-color: greenyellow;
+    grid-area: grid;
 }
 
 #grid {
     display: flex;
     flex-direction: column;
-    --theSize: 250px;
+    --theSize: 400px;
     width: var(--theSize);
     height: var(--theSize);
+    padding: 2em;
 }
 
 .row {
