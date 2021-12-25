@@ -21,7 +21,6 @@ body {
 }
 
 .title-wrapper {
-    margin-bottom: 1em;
     grid-area: header;
 }
 
@@ -77,5 +76,21 @@ body {
     }
     #grid{
         --theSize: 60vw;
+        padding: 1em;
+    }
+}
+
+@media screen and (orientation: landscape) and (max-device-height: 600px){
+    body {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "header grid"
+            "options grid";
+        grid-template-columns: 40% 1fr;
+        grid-template-rows: 20% 1fr;
+    }
+    #grid{
+        --theSize: 60vh;
+        padding: 1em;
     }
 }
